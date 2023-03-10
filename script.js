@@ -3,8 +3,15 @@ const firstName = document.getElementById('first-name');
 const lastName = document.getElementById('last-name');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
+const inputField = document.querySelectorAll('input');
 
-// Event Listener
+// Remove error message
+inputField.addEventListener('click', (e) => {
+    e.preventDefault();
+    resetError();
+})
+
+// Submit Event Listener
 submit.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -55,4 +62,9 @@ function errorFunc(req, message) {
 // Success Function
 function successFunc(req) {
     req.className += 'success';
+}
+// Remove Function
+function resetError(req) {
+    req.className.remove('error');
+    req.className.remove('success');
 }
