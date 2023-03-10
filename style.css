@@ -84,7 +84,12 @@ form {
     box-shadow: 0 8px 0px hsla(0, 0%, 0%, 0.2);
 }
 
+.form-field {
+    width: 100%;
+}
+
 input {
+    width: 100%;
     padding: 1rem;
     border-radius: 5px;
     border: 1px solid var(--Neutral-Grayish-Blue);
@@ -95,6 +100,11 @@ input::placeholder {
     font-size: 0.88rem;
     font-weight: 500;
     color: var(--Neutral-Dark-Blue);
+}
+
+input:focus,
+button:focus {
+    outline: none;
 }
 
 #submit {
@@ -116,8 +126,25 @@ input::placeholder {
     filter: brightness(110%);
 }
 
-.error-icon {
-    width: 1.5rem;
+.error {
+    border: 2px solid var(--Primary-Red) !important;
+    color: var(--Primary-Red);
+    background: url(./images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+}
+
+.success {
+    border: 2px solid var(--Primary-Green);
+}
+
+.error-text {
+    font-size: 12px;
+    font-style: italic;
+    margin-left: auto;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    color: var(--Primary-Red);
 }
 
 .terms {
